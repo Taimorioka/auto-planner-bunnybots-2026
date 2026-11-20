@@ -3,10 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FRC Field</title>
+    <title>FRC Pose Visualizer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- UI Overlay -->
+<div id="ui-panel">
+    <h3>Pose Controls</h3>
+
+    <div class="control-group">
+        <label>Poses (JSON):</label>
+        <input type="file" id="fileInput" accept=".json">
+        <button id="downloadBtn">Download JSON</button>
+        <button id="clearBtn">Clear Poses</button>
+    </div>
+
+    <p class="hint">Format: [{"x": 1.0, "y": 2.0, "theta": 0.0}]</p>
+</div>
+
 <canvas id="fieldCanvas"></canvas>
 <script src="script.js"></script>
 </body>
