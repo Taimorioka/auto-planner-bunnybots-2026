@@ -5,7 +5,7 @@ const fieldImage = new Image();
 let poses = [];
 
 const config = {
-    fieldX: 150,
+    fieldX: 193,
     fieldY: 50,
     fieldW: 1354,
     fieldH: 647,

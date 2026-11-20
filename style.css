@@ -56,14 +56,6 @@ button {
     width: 100%;
 }
 
-.hint {
-    font-size: 11px;
-    color: #666;
-    margin-top: 10px;
-    margin-bottom: 0;
-    line-height: 1.4;
-}
-
 #pose-panel {
     position: absolute;
     top: 10px;
