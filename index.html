@@ -7,18 +7,43 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- UI Overlay -->
 <div id="ui-panel">
     <h3>Pose Controls</h3>
-
     <div class="control-group">
         <label>Poses (JSON):</label>
         <input type="file" id="fileInput" accept=".json">
         <button id="downloadBtn">Download JSON</button>
+        <button id="addBtn">Add Pose</button>
         <button id="clearBtn">Clear Poses</button>
     </div>
+    <p class="hint">
+        Format: [{"x": 1.0, "y": 2.0, "theta": 0.0}]<br>
+        Add Pose places a new robot at field center.<br>
+        Drag a robot to move it.<br>
+        Drag its rear arrow to rotate it.<br>
+        Click a robot to edit its values.
+    </p>
+</div>
 
-    <p class="hint">Format: [{"x": 1.0, "y": 2.0, "theta": 0.0}]</p>
+<div id="pose-panel" class="hidden">
+    <h3>Pose <span id="poseIndexLabel">#0</span></h3>
+    <div class="control-group">
+        <label for="poseIndexInput">Pose number</label>
+        <input type="number" id="poseIndexInput" min="0" step="1">
+    </div>
+    <div class="control-group">
+        <label for="poseXInput">X (meters)</label>
+        <input type="number" id="poseXInput" step="0.01">
+    </div>
+    <div class="control-group">
+        <label for="poseYInput">Y (meters)</label>
+        <input type="number" id="poseYInput" step="0.01">
+    </div>
+    <div class="control-group">
+        <label for="poseThetaInput">Rotation θ (degrees)</label>
+        <input type="number" id="poseThetaInput" step="1">
+        <p class="hint" id="thetaRadHint">0.000 rad</p>
+    </div>
 </div>
 
 <canvas id="fieldCanvas"></canvas>
